@@ -1,0 +1,21 @@
+<p>Listado de Herores</p>
+
+<!-- Directivas especificas de angular empiezan con ng ng-for, ng-if -->
+<button (click)="borrarHeroe()">
+    Borrar
+</button>
+<div>
+    <h3 *ngIf="(heroeBorrado != ''); else noBorrado">
+        Heroe Borrado: {{heroeBorrado}}
+    </h3>
+</div>
+
+<ng-template #noBorrado>
+    <h3>No ha borrado nada.</h3>
+</ng-template>
+
+<ul>
+    <li *ngFor="let heroe of heroes; let index = index">
+        {{index + 1}} - {{heroe}}
+    </li>
+</ul>
