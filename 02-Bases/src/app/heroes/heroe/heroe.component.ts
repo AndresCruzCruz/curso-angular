@@ -4,14 +4,14 @@ import { Component } from '@angular/core';
     templateUrl: './heroe.component.html'
 })
 export class HeroeComponent {
-    public nombre: string = 'Ironman';
-    public edad: number = 45;
+    public nombre: string = 'ironman';
+    public edad:   number = 45;
 
     get nombreCapitalizado(): string  {
         return this.nombre.toUpperCase();
     }
 
-    obtenerNombre() : string { // Losbackstick permiten crear templates de 1 linea 
+    obtenerNombre() : string { // Losbackstick permiten crear templates de 1 linea
         return `${ this.nombre } - ${ this.edad }`;
     }
 
@@ -22,4 +22,9 @@ export class HeroeComponent {
     cambiarEdad():void {
         this.edad = 23;
     }
-}  
+
+    resetForm():void {
+        this.nombre = 'ironman';
+        this.edad = 45;
+    }
+}

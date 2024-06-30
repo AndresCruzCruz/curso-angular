@@ -10,8 +10,9 @@ import { ListadoComponent } from './listado/listado.component';
         ListadoComponent
     ],
     exports: [ // Que cosas son visibles afuera de este modulo
-        ListadoComponent
-    ], 
+        ListadoComponent,
+        HeroeComponent
+    ],
     imports: [ // Aqui van todos los modulos
         CommonModule // Es importante ya que contiene las directivas de angular (NGIF, NGFOR)
     ]

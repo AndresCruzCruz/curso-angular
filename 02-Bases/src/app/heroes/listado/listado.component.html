@@ -2,10 +2,10 @@
 
 <!-- Directivas especificas de angular empiezan con ng ng-for, ng-if -->
 <button (click)="borrarHeroe()">
-    Borrar
+    Borrar último heroe
 </button>
-<div>
-    <h3 *ngIf="(heroeBorrado != ''); else noBorrado">
+<div *ngIf="(heroeBorrado != ''); else noBorrado">
+    <h3>
         Heroe Borrado: {{heroeBorrado}}
     </h3>
 </div>
