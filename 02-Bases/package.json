@@ -6,7 +6,13 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+
+    "build:github": "npm run delete:dist && npm run build:href && npm run copy:dist",
+
+    "build:href": "ng build --base-href ./",
+    "delete:dist": "del dist",
+    "copy:dist": "copyfiles dist/bases/* ../docs -f"
   },
   "private": true,
   "dependencies": {
